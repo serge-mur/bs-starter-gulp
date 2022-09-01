@@ -1,0 +1,35 @@
+/* USER VARIABLES SECTION */
+:root {
+  --accent: #1d7131;
+  --accent--rgb: 29,113,49;
+  --black: #000000;
+  --black--rgb: 0, 0, 0;
+  --white: #ffffff;
+  --white--rgb: 255, 255, 255;
+  --red: #dc3545;
+  --green: #28a745;
+  --bgbody: #ffffff;
+  --fontsize: 16px;
+  --textcolor: #555;
+  --lineheight: 1.4;
+  --userfont: rubik-ag, sans-serif;
+  --secondfont: robotoslab-ag, serif;
+  --transition: .3s ease;
+}
+
+/* FONTS LOAD SECTION */
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		src: url($furl) format('woff2');
+  }
+}
+
+@include font('rubik-ag', normal, 400, '../fonts/rubik-400.woff2');
+@include font('rubik-ag', normal, 500, '../fonts/rubik-500.woff2');
+@include font('rubik-ag', normal, 700, '../fonts/rubik-700.woff2');
+
+@include font('robotoslab-ag', normal, 400, '../fonts/roboto-slab-400.woff2');
+@include font('robotoslab-ag', normal, 700, '../fonts/roboto-slab-700.woff2');

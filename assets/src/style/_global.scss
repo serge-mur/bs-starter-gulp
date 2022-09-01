@@ -1,0 +1,65 @@
+/* GENERAL CSS SETTINGS */
+::placeholder {
+  color: #666;
+}
+::selection {
+  background-color: var(--accent);
+	color: #fff;
+}
+
+input, textarea {
+  outline: none;
+  &:focus:required:invalid {
+    border-color: var(--red);
+  }
+  &:required:valid {
+    border-color: var(--green);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  &-track {
+    background-color: #F0EAE2;
+  }
+  &-thumb {
+    border-radius: 5px;
+    background-color: var(--accent);
+    &:hover {
+      background-color: var(--accent);
+    }
+  }
+}
+
+body {
+  font-family: var(--userfont);
+  font-size: var(--fontsize);
+  line-height: var(--lineheight);
+  color: var(--textcolor);
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--bgbody);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+  &:hover {
+    color: var(--textcolor);
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+  color: var(--black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
